@@ -29,6 +29,8 @@ Aplicativo de anúncios de produtos ao estilo OLX.
 
 ## 🔖 Layout
 
+![alt text](https://github.com/va-p/Marketspace/blob/main/screenShots/Capa.png?raw=true)
+
 ## Executando o projeto
 
 Utilize o **yarn** ou o **npm install** para instalar as dependências do projeto, em seguida, inicie o projeto.
