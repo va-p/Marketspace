@@ -1,27 +1,47 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useEffect, useState } from 'react';
+import { StatusBar } from 'react-native';
 
-import { ThemeProvider } from "styled-components";
-import { StatusBar } from "expo-status-bar";
+import * as SplashScreen from 'expo-splash-screen';
+import { ThemeProvider } from 'styled-components';
+import * as Font from 'expo-font';
 
-import { THEME } from "./src/global/themes/theme";
+import { Routes } from '@routes/index';
+
+import { Karla_400Regular, Karla_700Bold } from '@expo-google-fonts/karla';
+
+import { THEME } from './src/global/themes/theme';
+
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
+  const [appIsReady, setAppIsReady] = useState(false);
+
+  useEffect(() => {
+    async function prepare() {
+      try {
+        await Font.loadAsync({
+          Karla_400Regular,
+          Karla_700Bold,
+        });
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setAppIsReady(true);
+        SplashScreen.hideAsync();
+      }
+    }
+
+    prepare();
+  }, []);
+
+  if (!appIsReady) {
+    return null;
+  }
+
   return (
     <ThemeProvider theme={THEME}>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <StatusBar style="auto" />
-      </View>
+      <StatusBar barStyle='light-content' />
+      <Routes />
     </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

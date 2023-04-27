@@ -7,7 +7,7 @@ export const Container = styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_7};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_6};
 `;
 
 export const LogoContainer = styled.View`
@@ -27,15 +27,13 @@ export const Form = styled.View`
 `;
 
 export const Title = styled.Text`
+  font-family: ${({ theme }) => theme.FONTS.BOLD};
+  font-size: ${RFValue(20)}px;
+  color: ${({ theme }) => theme.COLORS.GRAY_1};
+`;
+
+export const SubTitle = styled.Text`
   font-family: ${({ theme }) => theme.FONTS.REGULAR};
   font-size: ${RFValue(14)}px;
   color: ${({ theme }) => theme.COLORS.GRAY_2};
-`;
-
-export const Footer = styled.View`
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 56px 48px;
 `;

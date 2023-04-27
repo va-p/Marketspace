@@ -19,13 +19,14 @@ Aplicativo de anúncios de produtos ao estilo OLX.
 - [x] Prettier
 - [x] ESLint
 - [x] Babel Module Resolver
-- [] Expo Google Fonts
-- [] React Native Responsive Fontsize
-- [] iPhone X Helper
-- [] React Hook Form
+- [x] Expo Google Fonts
+- [x] React Navigation Stack
+- [x] React Navigation Bottom Tabs
+- [x] React Native Svg e Svg Transform
+- [x] React Native Responsive Fontsize
+- [x] iPhone X Helper
+- [x] React Hook Form
 - [] Vector Icons
-- [] React Native Svg e Svg Transform
-- [] React Navigation Stack
 
 ## 🔖 Layout
 
