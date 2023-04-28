@@ -14,7 +14,7 @@ export const Label = styled.Text`
 export const ErrorMessage = styled.Text`
   font-family: ${({ theme }) => theme.FONTS.BOLD};
   font-size: ${RFValue(14)}px;
-  color: ${({ theme }) => theme.COLORS.RED_DARK};
+  color: ${({ theme }) => theme.COLORS.RED_LIGHT};
 `;
 
 export const Input = styled.TextInput.attrs({
