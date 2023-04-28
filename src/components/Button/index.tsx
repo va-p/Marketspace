@@ -1,8 +1,9 @@
 import React from 'react';
-import { PressableProps } from 'react-native';
-import { ButtonTypeProps, Container, Title } from './styles';
+import { ButtonTypeProps, Container, Load, Title } from './styles';
 
-type Props = PressableProps & {
+import { RectButtonProps } from 'react-native-gesture-handler';
+
+type Props = RectButtonProps & {
   type?: ButtonTypeProps;
   icon?: any;
   title: string;
@@ -19,7 +20,7 @@ export function Button({
   return (
     <Container isActive={isActive} type={type} {...rest}>
       {icon}
-      <Title type={type}>{title}</Title>
+      {isActive ? <Load type={type} /> : <Title type={type}>{title}</Title>}
     </Container>
   );
 }

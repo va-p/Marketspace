@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/native';
 
-import { Pressable } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 export type ButtonTypeProps = 'primary' | 'secondary' | 'terciary';
@@ -10,7 +10,7 @@ type ButtonProps = {
   isActive: boolean;
 };
 
-export const Container = styled(Pressable)<ButtonProps>`
+export const Container = styled(RectButton)<ButtonProps>`
   flex-direction: row;
   width: 100%;
   min-height: 48px;
@@ -55,3 +55,9 @@ export const Title = styled.Text<ButtonProps>`
       color: ${({ theme }) => theme.COLORS.GRAY_2};
     `};
 `;
+
+export const Load = styled.ActivityIndicator.attrs<ButtonProps>(
+  ({ type, theme }) => ({
+    color: type != 'terciary' ? theme.COLORS.GRAY_7 : theme.COLORS.GRAY_2,
+  })
+)``;
