@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'react-native';
 
-import * as SplashScreen from 'expo-splash-screen';
-import { ThemeProvider } from 'styled-components';
 import * as Font from 'expo-font';
+import { ThemeProvider } from 'styled-components';
+import * as SplashScreen from 'expo-splash-screen';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { Routes } from '@routes/index';
 
@@ -39,9 +40,11 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={THEME}>
-      <StatusBar barStyle='light-content' />
-      <Routes />
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemeProvider theme={THEME}>
+        <StatusBar barStyle='light-content' />
+        <Routes />
+      </ThemeProvider>
+    </GestureHandlerRootView>
   );
 }

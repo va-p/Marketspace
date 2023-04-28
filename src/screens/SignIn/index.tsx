@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { Container, Footer, Form, LogoContainer, Title } from './styles';
 
-import { yupResolver } from '@hookform/resolvers/yup';
-import { useForm } from 'react-hook-form';
 import * as Yup from 'yup';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 
-import { ControlledInput } from '@components/Form/ControlledInput';
 import { Button } from '@components/Button';
+import { ControlledInput } from '@components/Form/ControlledInput';
 
 import Logo from '@assets/Logo.svg';
+import { Platform } from 'react-native';
 
 type FormData = {
   email: string;
@@ -36,7 +37,7 @@ export function SignIn({ navigation }) {
   }
 
   return (
-    <Container>
+    <Container behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <Form>
         <LogoContainer>
           <Logo width={193} height={132} />
