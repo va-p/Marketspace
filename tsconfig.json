@@ -3,14 +3,15 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@themes/*": ["./src/global/themes/*"],
-      "@components/*": ["./src/components/*"],
-      "@contexts/*": ["./src/contexts/*"],
-      "@screens/*": ["./src/screens/*"],
-      "@routes/*": ["./src/routes/*"],
-      "@assets/*": ["./src/assets/*"],
+      "@api/*": ["./src/api/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@api/*": ["./src/api/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@databases/*": ["./src/databases/*"],
+      "@themes/*": ["./src/global/themes/*"],
+      "@components/*": ["./src/components/*"]
     }
   }
 }
