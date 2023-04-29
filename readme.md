@@ -26,6 +26,8 @@ Aplicativo de anúncios de produtos ao estilo OLX.
 - [x] React Native Responsive Fontsize
 - [x] iPhone X Helper
 - [x] React Hook Form
+- [x] React Native Gesture Hander
+- [x] React Native MMKV
 - [] Vector Icons
 
 ## 🔖 Layout
